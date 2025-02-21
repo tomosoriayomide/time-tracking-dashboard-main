@@ -1,0 +1,224 @@
+@font-face {
+  font-family: karla;
+  src: url(./fonts-karla/Rubik/static/Rubik-Light.ttf);
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+.container {
+  /* background-color: red; */
+  width: 80%;
+  margin: 30px auto;
+  gap: 10px;
+  /* height: 75vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid1 {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 12px;
+  /* display: grid; */
+}
+.box1 {
+  background-color: hsl(246, 80%, 60%);
+  width: 100%;
+  height: 60%;
+  padding: 20px;
+  border-radius: 12px;
+}
+.name {
+  color: hsl(240, 12%, 90%);
+  font-family: karla;
+  font-size: xx-large;
+}
+.report {
+  font-family: sans-serif;
+  color: hsl(236, 39%, 72%);
+  padding-top: 30px;
+  font-size: smaller;
+}
+
+.man {
+  width: 30%;
+  /* padding: 20px; */
+  /* margin: 20px; */
+  border: 2px solid white;
+  border-radius: 100%;
+}
+.timing {
+  font-family: sans-serif;
+  color: hsl(235, 45%, 61%);
+  font-size: small;
+  padding: 10px;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.timing:hover {
+  color: white;
+  cursor: pointer;
+}
+.grid2 {
+  /* background-color: yellow; */
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.grid2a {
+  background-color: hsl(15, 100%, 70%);
+  border-radius: 12px;
+}
+
+.work {
+  height: 140%;
+  float: right;
+}
+.playtext {
+  color: white;
+  font-family: sans-serif;
+  font-size: smaller;
+}
+.ellipsis {
+  float: right;
+}
+.ellipsis:hover {
+  /* color: white; */
+  /* background-color: white; */
+  cursor: pointer;
+}
+.box:hover {
+  background-color: rgb(68, 68, 141);
+  cursor: pointer;
+}
+.hrs {
+  font-family: karla;
+  color: white;
+  font-size: xx-large;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  /* font-weight: lighter; */
+}
+.weekhrs {
+  font-family: sans-serif;
+  font-size: smaller;
+
+  color: hsl(236, 17%, 64%);
+}
+.box {
+  background-color: hsl(235, 46%, 20%);
+  height: 85%;
+  padding: 20px;
+  border-radius: 12px;
+}
+.grid2b {
+  background-color: hsl(145, 58%, 55%);
+  border-radius: 12px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.grid3a {
+  background-color: hsl(195, 74%, 62%);
+  border-radius: 12px;
+}
+
+.grid3b {
+  background-color: hsl(264, 64%, 52%);
+  border-radius: 12px;
+}
+.grid4 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.grid4a {
+  background-color: hsl(348, 100%, 68%);
+  border-radius: 12px;
+}
+.namephone {
+  display: none;
+}
+.img {
+  height: 15%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.grid4abox {
+  background-color: green;
+  height: 85%;
+  border-radius: 12px;
+}
+.grid4b {
+  background-color: hsl(43, 84%, 65%);
+  border-radius: 12px;
+}
+@media screen and (min-width: 300px) and (max-width: 520px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .box2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .box1 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    align-items: center;
+  }
+  .man {
+    width: 20%;
+  }
+  .display {
+    display: flex;
+    flex-direction: column;
+  }
+  .report {
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  .hrsweek {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .name {
+    display: none;
+  }
+
+  .namephone {
+    color: hsl(240, 12%, 90%);
+    font-family: karla;
+    display: flex;
+    font-size: larger;
+  }
+  .grid2b {
+    /* gap: 20px; */
+    height: 35vh;
+  }
+  .grid2a {
+    height: 35vh;
+  }
+  .grid3a {
+    height: 35vh;
+  }
+  .grid3b {
+    height: 35vh;
+  }
+  .grid4a {
+    height: 35vh;
+  }
+  .grid4b {
+    height: 35vh;
+  }
+}
