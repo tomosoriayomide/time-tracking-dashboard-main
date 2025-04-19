@@ -15,14 +15,16 @@ body {
   width: 80%;
   margin: 30px auto;
   gap: 10px;
-  /* height: 75vh; */
+  height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .grid1 {
   background-color: hsl(235, 46%, 20%);
   border-radius: 12px;
+  height: 80%;
   /* display: grid; */
+  margin-top: 20%;
 }
 .box1 {
   background-color: hsl(246, 80%, 60%);
@@ -58,6 +60,37 @@ body {
   padding-left: 20px;
   margin-top: 10px;
 }
+#preloader {
+  background-color: hsl(226, 43%, 10%);
+  width: 100%;
+  height: 120vh;
+  margin-top: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+}
+#loader {
+  border: 5px solid white;
+  width: 400px;
+  height: 3vh;
+  border-radius: 20px;
+}
+#loaderfill {
+  background-color: hsl(235, 45%, 61%);
+  width: 10px;
+  height: 100%;
+  border-radius: 20px;
+}
+.daily {
+  /* color: red; */
+  display: none;
+}
+#weak {
+  color: white;
+  /* display: none; */
+}
 .timing:hover {
   color: white;
   cursor: pointer;
@@ -71,6 +104,8 @@ body {
 .grid2a {
   background-color: hsl(15, 100%, 70%);
   border-radius: 12px;
+  height: 80%;
+  margin-top: 20%;
 }
 
 .work {
@@ -116,6 +151,7 @@ body {
 }
 .grid2b {
   background-color: hsl(145, 58%, 55%);
+  height: 80%;
   border-radius: 12px;
 }
 
@@ -126,12 +162,15 @@ body {
 }
 .grid3a {
   background-color: hsl(195, 74%, 62%);
+  margin-top: 20%;
   border-radius: 12px;
+  height: 80%;
 }
 
 .grid3b {
   background-color: hsl(264, 64%, 52%);
   border-radius: 12px;
+  height: 80%;
 }
 .grid4 {
   display: grid;
@@ -140,7 +179,9 @@ body {
 }
 .grid4a {
   background-color: hsl(348, 100%, 68%);
+  margin-top: 20%;
   border-radius: 12px;
+  height: 80%;
 }
 .namephone {
   display: none;
@@ -155,23 +196,71 @@ body {
   background-color: green;
   height: 85%;
   border-radius: 12px;
+  margin-top: 20%;
 }
 .grid4b {
   background-color: hsl(43, 84%, 65%);
+  height: 80%;
   border-radius: 12px;
 }
-@media screen and (min-width: 300px) and (max-width: 520px) {
+.attribution {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  color: white;
+  font-family: cursive;
+}
+#week {
+  color: white;
+}
+#hrdaily,
+#hrdailys,
+#hrmonthly,
+#hrmonthlys {
+  display: none;
+}
+@media screen and (min-width: 300px) and (max-width: 1000px) {
   .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    /* gap: 0px; */
+    /* background-color: purple; */
+    height: auto;
+    /* margin-top: 0px; */
+  }
+  #loader {
+    width: 80%;
+
+    /* display: none; */
+  }
+  #load {
+    width: 80%;
   }
   .box2 {
+    margin-top: 0px;
+    /* background-color: red; */
     display: flex;
+    height: 150px;
     flex-direction: row;
   }
+  .grid1,
+  .grid2a,
+  .grid2b,
+  .grid3a,
+  .grid3b,
+  .grid4a,
+  .grid4b {
+    height: 100%;
+    /* background-color: red; */
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
   .box1 {
+    /* margin-top: 0px; */
     display: flex;
+    /* background-color: rebeccapurple; */
+    height: 200px;
     gap: 20px;
     padding: 30px;
     align-items: center;

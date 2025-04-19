@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32*32"
+      href="./images/favicon-32x32.png"
+    />
     <title>Time Tracking Dashboard</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
+    <div id="preloader">
+      <div id="loader">
+        <div id="loaderfill" ></div>
+      </div>
+      <!-- <button onclick="load()">click</button> -->
+    </div>
+    <div class="container" id="cont">
       <div class="grid1">
         <div class="box1">
           <img src="./images/image-jeremy.png" alt="" class="man" />
@@ -23,9 +35,9 @@
           </div>
         </div>
         <div class="box2">
-          <p class="timing">Daily</p>
-          <p class="timing">Weekly</p>
-          <p class="timing">Monthly</p>
+          <p class="timing" id="daily" onclick="daily()">Daily</p>
+          <p class="timing" id="weak" onclick="week()">Weekly</p>
+          <p class="timing" id="monthly" onclick="monthly()">Monthly</p>
         </div>
       </div>
       <div class="grid2">
@@ -37,8 +49,12 @@
             <span class="playtext">Work</span
             ><img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
             <div class="hrsweek">
-              <p class="hrs">32hrs</p>
-              <p class="weekhrs">Last Week-36hrs</p>
+              <p class="hrs" id="hrweek">32hrs</p>
+              <p class="hrs" id="hrdaily">5hrs</p>
+              <p class="hrs" id="hrmonthly">103hrs</p>
+              <p class="weekhrs" id="hrweeks">Last Week- 36hrs</p>
+              <p class="weekhrs" id="hrdailys">Last Week- 7hrs</p>
+              <p class="weekhrs" id="hrmonthlys">Last Week- 128hrs</p>
             </div>
           </div>
         </div>
@@ -50,8 +66,12 @@
             <span class="playtext">Exercise</span>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
             <div class="hrsweek">
-              <p class="hrs">4hrs</p>
-              <p class="weekhrs">Last Week-5hrs</p>
+              <p class="hrs" id="hrweek2">4hrs</p>
+              <p class="hrs daily" id="hrdaily2">1hr</p>
+              <p class="hrs daily" id="hrmonthly2">11hrs</p>
+              <p class="weekhrs" id="hrweeks2">Last Week- 5hrs</p>
+              <p class="weekhrs daily" id="hrdailys2">Last Week- 1hr</p>
+              <p class="weekhrs daily" id="hrmonthlys2">Last Week- 18hr</p>
             </div>
           </div>
         </div>
@@ -65,8 +85,12 @@
             <span class="playtext">Play</span>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
             <div class="hrsweek">
-              <p class="hrs">10hrs</p>
-              <p class="weekhrs">Last Week-8hrs</p>
+              <p class="hrs" id="hrweek3">10hrs</p>
+              <p class="hrs daily" id="hrdaily3">1hr</p>
+              <p class="hrs daily" id="hrmonthly3">23hrs</p>
+              <p class="weekhrs" id="hrweeks3">Last Week-8hrs</p>
+              <p class="weekhrs daily" id="hrdailys3">Last Week-2hrs</p>
+              <p class="weekhrs daily" id="hrmonthlys3">Last Week-29hrs</p>
             </div>
           </div>
         </div>
@@ -78,8 +102,12 @@
             <span class="playtext">Social</span>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
             <div class="hrsweek">
-              <p class="hrs">5hrs</p>
-              <p class="weekhrs">Last Week-10hrs</p>
+              <p class="hrs" id="hrweek4">5hrs</p>
+              <p class="hrs daily" id="hrdaily4">1hrs</p>
+              <p class="hrs daily" id="hrmonthly4">21hrs</p>
+              <p class="weekhrs" id="hrweeks4">Week-10hrs</p>
+              <p class="weekhrs daily" id="hrdailys4">Week-3hrs</p>
+              <p class="weekhrs daily" id="hrmonthlys4">Week-23hrs</p>
             </div>
           </div>
         </div>
@@ -93,8 +121,16 @@
             <span class="playtext">Study</span>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
             <div class="hrsweek">
-              <p class="hrs">4hrs</p>
-              <p class="weekhrs">Last Week-7hrs</p>
+              <p class="hrs" id="hrweek5">4hrs</p>
+              <p class="hrs daily" id="hrdaily5">0hrs</p>
+              <p class="hrs daily" id="hrmonthly5">13hrs</p>
+              <p class="weekhrs" id="numweek">Last Week- <span>7</span>hrs</p>
+              <p class="weekhrs daily" id="numday">
+                Last Week- <span>1</span>hr
+              </p>
+              <p class="weekhrs daily" id="nummonth">
+                Last Week- <span>19</span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -106,13 +142,18 @@
             <span class="playtext">Self Care</span>
             <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
             <div class="hrsweek">
-              <p class="hrs">2hrs</p>
-              <p class="weekhrs">Last Week-2hrs</p>
+              <p class="hrs" id="final">2hrs</p>
+              <p class="hrs daily" id="finally">0hrs</p>
+              <p class="hrs daily" id="done">7hrs</p>
+              <p class="weekhrs" id="weeklast">Last Week-2hrs</p>
+              <p class="weekhrs daily" id="daylast">Last Week-1hrs</p>
+              <p class="weekhrs daily" id="monthlast">Last Week-11hrs</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <br />
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -122,5 +163,6 @@
         >Tomosori Ayomide</a
       >.
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>
